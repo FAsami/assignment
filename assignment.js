@@ -10,7 +10,6 @@ function feetToMile(feet) {
   var mile = feet / 5280;
   return mile;
 }
-console.log(feetToMile(34));
 
 function woodCalculator(chair, table, bed) {
   if (chair < 0 || table < 0 || bed < 0) {
@@ -29,7 +28,6 @@ function woodCalculator(chair, table, bed) {
   var totalWoodNeeded = chairWood + tableWood + bedWood;
   return totalWoodNeeded;
 }
-console.log(woodCalculator(1, 1, 1));
 
 function breekCalculator(floor) {
   if (floor <= 0) {
@@ -38,18 +36,17 @@ function breekCalculator(floor) {
     return "Plese input a valid number";
   }
 
-  var totalBrick;
+  var bulidingHeight, totalBricks;
   if (floor >= 1 && floor <= 10) {
-    totalBrick = floor * 15;
+    bulidingHeight = floor * 15;
   } else if (floor >= 11 && floor <= 20) {
-    totalBrick = 10 * 15 + (floor - 10) * 12;
+    bulidingHeight = 10 * 15 + (floor - 10) * 12;
   } else {
-    totalBrick = 10 * 15 + 10 * 12 + (floor - 20) * 10;
+    bulidingHeight = 10 * 15 + 10 * 12 + (floor - 20) * 10;
   }
-  return totalBrick;
+  totalBricks = bulidingHeight * 1000;
+  return totalBricks;
 }
-
-console.log(breekCalculator(1));
 
 function tinyFriend(friendsArray) {
   if (friendsArray.length === 0) {
@@ -63,5 +60,3 @@ function tinyFriend(friendsArray) {
   }
   return smallName;
 }
-
-console.log(tinyFriend(["Omi", "Hasan", "Asad"]));
